@@ -1,3 +1,4 @@
+/* ヘッダー */
 header {
   position: fixed;
   top: 0; left: 0;
@@ -12,13 +13,39 @@ header {
 }
 
 header .logo img {
-  height: 40px; /* 適宜調整 */
+  height: 40px;
 }
 
 header .button a {
   padding: 8px 15px;
-  background-color: #00c300; /* 緑ボタン */
+  background-color: #00c300;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+}
+
+/* メインビジュアル */
+#main-visual {
+  margin-top: 70px; /* ヘッダー分のスペース */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;      /* 画面半分より少し左 → 右端少し手前まで */
+  margin-left: 20%; /* 左端を調整 */
+}
+
+.image-grid img {
+  width: calc(50% - 10px); /* 2列に配置 */
+  height: calc(50% - 10px); /* 高さを画面半分程度に調整 */
+  object-fit: cover;        /* 上下切れても自然に表示 */
+  margin-bottom: 10px;
 }
