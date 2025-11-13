@@ -1,34 +1,39 @@
-/* ヘッダー */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
 header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
   padding: 10px 20px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
 }
 
-header .logo img {
+.logo {
   height: 40px;
 }
 
-header .button a {
-  padding: 8px 15px;
+.line-btn {
+  text-decoration: none;
   background-color: #00c300;
   color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-/* メインビジュアル */
 #main-visual {
   position: relative;
-  margin-top: 70px; /* ヘッダー分のスペース */
-  height: 100vh;    /* 1画面分 */
+  margin-top: 70px;
+  height: 100vh;
   overflow: hidden;
   background-color: #f5f5f5;
 }
@@ -37,8 +42,9 @@ header .button a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 60%;      /* 左半分のさらに半分から右端少し手前まで */
-  margin-left: 20%;
+  width: 60%;
+  margin-left: 25%; /* 右寄せ */
+  position: relative;
 }
 
 .image-grid img {
@@ -46,19 +52,29 @@ header .button a {
   height: calc(50% - 10px);
   object-fit: cover;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
 }
 
-/* 文字 */
+.image-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0));
+  z-index: 2;
+  pointer-events: none;
+}
+
 .main-text {
   position: absolute;
-  top: 20%;          /* 文字の縦位置 */
-  left: 10%;         /* 画面半分の左のさらに半分より少し左 */
-  width: 40%;        /* 画面半分まで文字が届く */
-  color: #000;       /* 文字を黒に */
-  font-family: sans-serif;
+  top: 20%;
+  left: calc(10% + 1cm); /* 右に1cmずらす */
+  width: 40%;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.5;
+  z-index: 3;
 }
-
-.main-text .line1 { font-size: 1.2rem; }
-.main-text .line1 .underline { text-decoration: underline; }
-.main-text .line2 { font-size: 1.5rem; margin-top: 0.5rem; }
-.main-text .line3 { font-size: 2rem; margin-top: 0.5rem; line-height: 1.2; }
