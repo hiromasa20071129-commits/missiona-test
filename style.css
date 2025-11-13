@@ -45,12 +45,13 @@ header .button a {
   margin-bottom: 10px;
 }
 
+
 .main-text {
   position: absolute;
   top: 20%;          /* 文字の縦位置調整 */
   left: 10%;         /* 画面半分の左のさらに半分より少し左 */
   width: 40%;        /* 画面半分まで文字が届く */
-  color: #fff;
+  color: #000;       /* 文字を黒に変更 */
   font-family: sans-serif;
 }
 
@@ -58,5 +59,3 @@ header .button a {
 .main-text .line1 .underline { text-decoration: underline; }
 .main-text .line2 { font-size: 1.5rem; margin-top: 0.5rem; }
 .main-text .line3 { font-size: 2rem; margin-top: 0.5rem; line-height: 1.2; }
-
-
