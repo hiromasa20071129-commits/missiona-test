@@ -24,17 +24,20 @@ header .button a {
   border-radius: 4px;
 }
 
+/* メインビジュアル */
 #main-visual {
   position: relative;
-  height: 100vh; /* 1画面分 */
+  margin-top: 70px; /* ヘッダー分のスペース */
+  height: 100vh;    /* 1画面分 */
   overflow: hidden;
+  background-color: #f5f5f5;
 }
 
 .image-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 60%;      /* 画面半分より少し左 → 右端少し手前まで */
+  width: 60%;      /* 左半分のさらに半分から右端少し手前まで */
   margin-left: 20%;
 }
 
@@ -45,13 +48,13 @@ header .button a {
   margin-bottom: 10px;
 }
 
-
+/* 文字 */
 .main-text {
   position: absolute;
-  top: 20%;          /* 文字の縦位置調整 */
+  top: 20%;          /* 文字の縦位置 */
   left: 10%;         /* 画面半分の左のさらに半分より少し左 */
   width: 40%;        /* 画面半分まで文字が届く */
-  color: #000;       /* 文字を黒に変更 */
+  color: #000;       /* 文字を黒に */
   font-family: sans-serif;
 }
 
